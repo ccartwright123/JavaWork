@@ -10,22 +10,18 @@ public class app {
 
 		person.print();
 
-		person mycat = new person();
-		mycat.addcat(new cat("mittins", 3, "white"));
-		mycat.addcat(new cat("fluffy", 5, "black"));
+		personManager mypet = new personManager();
+		mypet.addpet(new cat("mittins", 3, "white", false));
+		mypet.addpet(new cat("fluffy", 50, "black", false));
+		mypet.addpet(new dog("floppy", 3, "white-bagie", "boxer"));
+		mypet.addpet(new dog("paws", 5, "black", "poodle"));
 
-		mycat.catprint();
+		mypet.petprint();
 
-		person mydog = new person();
-		mydog.adddog(new dog("floppy", 3, "white-bagie"));
-		mydog.adddog(new dog("paws", 5, "black"));
-
-		mydog.dogprint();
-
-		person charlotte = new person();
+		personManager charlotte = new personManager();
 		charlotte.addAnimalperson(new person("charlotte", 18, "apprentice"));
-		charlotte.adddog(new dog("lily", 3, "brown"));
-		charlotte.addcat(new cat("mittins", 7, "black"));
+		charlotte.addpet(new dog("lily", 3, "brown", "cockapoo"));
+		charlotte.addpet(new cat("mittins", 7, "black", true));
 
 		charlotte.AnimalPrint();
 	}

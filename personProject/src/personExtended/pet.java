@@ -1,19 +1,24 @@
 package personExtended;
 
-public class person {
+public class pet {
 
 	private String name;
 	private int age;
-	private String job;
+	private String colour;
 
-	public person() {
+	public pet(String name, int age, String colour) {
+		super();
+		setName(name);
+		setAge(age);
+		setColour(colour);
+	}
+
+	public pet() {
 
 	}
 
-	public person(String name, int age, String job) {
-		setName(name);
-		setAge(age);
-		setColour(job);
+	public void speak() {
+		System.out.println("im a pet");
 	}
 
 	public void setName(String name) {
@@ -21,7 +26,7 @@ public class person {
 	}
 
 	public void setAge(int age) {
-		if (age > 0 && age < 120) {
+		if (age > 0 && age < 20) {
 			this.age = age;
 		} else {
 			System.out.println("Invalid age");
@@ -29,7 +34,7 @@ public class person {
 	}
 
 	public void setColour(String colour) {
-		this.job = colour;
+		this.colour = colour;
 	}
 
 	public String getName() {
@@ -41,16 +46,7 @@ public class person {
 	}
 
 	public String getColour() {
-		return job;
-	}
-
-	public void personprint() {
-		System.out.print("Name: ");
-		System.out.println(this.name);
-		System.out.print("Age: ");
-		System.out.println(this.age);
-		System.out.print("Job: ");
-		System.out.println(this.job);
+		return colour;
 	}
 
 	public void print() {
@@ -58,7 +54,7 @@ public class person {
 		System.out.println(this.name);
 		System.out.print("Age: ");
 		System.out.println(this.age);
-		System.out.print("Job: ");
-		System.out.println(this.job);
+		System.out.print("Colour: ");
+		System.out.println(this.colour);
 	}
 }
