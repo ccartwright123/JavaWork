@@ -11,6 +11,7 @@ public class App {
 		help.addVehicle(new Lorry(25, "2004run", 700));
 
 		help.Print();
+		help.listCost();
 
 		help.removeID(25);
 		help.removeType("Motorbike");

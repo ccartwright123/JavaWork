@@ -22,6 +22,15 @@ public class Motorbike extends Vehicle {
 	}
 
 	@Override
+	public void changeExtraCost() {
+		if (getCBT() == true) {
+			setExtraCost(300);
+		} else {
+			setExtraCost(1000);
+		}
+	}
+
+	@Override
 	public void currentPrint() {
 		System.out.println("ID: ");
 		System.out.println(getId());

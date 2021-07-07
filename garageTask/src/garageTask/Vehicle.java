@@ -5,10 +5,13 @@ public abstract class Vehicle {
 	private int id;
 	private String make;
 	private String type;
+	private int cost;
+	private int extraCost;
 
 	public Vehicle(int id, String make) {
 		setId(id);
 		setMake(make);
+
 	}
 
 	public Vehicle() {
@@ -27,6 +30,14 @@ public abstract class Vehicle {
 		this.type = type;
 	}
 
+	public void setCost() {
+		this.cost = 1000;
+	}
+
+	public void setExtraCost(int extraCost) {
+		this.extraCost = extraCost;
+	}
+
 	public int getId() {
 		return this.id;
 	}
@@ -39,5 +50,24 @@ public abstract class Vehicle {
 		return this.type;
 	}
 
+	public int getCost() {
+		return this.cost;
+	}
+
+	public int getExtraCost() {
+		return this.extraCost;
+	}
+
 	public abstract void currentPrint();
+
+	public abstract void changeExtraCost();
+
+	public void billPrint() {
+		changeExtraCost();
+		setCost();
+		System.out.println("id: ");
+		System.out.println(getId());
+		System.out.println("Total cost: ");
+		System.out.println(getCost() + getExtraCost());
+	}
 }

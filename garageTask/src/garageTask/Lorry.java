@@ -21,6 +21,17 @@ public class Lorry extends Vehicle {
 	}
 
 	@Override
+	public void changeExtraCost() {
+		if (getCargo() < 500) {
+			setExtraCost(600);
+		} else if (getCargo() < 700) {
+			setExtraCost(900);
+		} else {
+			setExtraCost(1200);
+		}
+	}
+
+	@Override
 	public void currentPrint() {
 		System.out.println("ID: ");
 		System.out.println(getId());

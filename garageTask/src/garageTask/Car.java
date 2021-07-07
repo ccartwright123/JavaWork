@@ -22,6 +22,17 @@ public class Car extends Vehicle {
 	}
 
 	@Override
+	public void changeExtraCost() {
+		if (getPassangers() < 3) {
+			setExtraCost(300);
+		} else if (getPassangers() < 5) {
+			setExtraCost(600);
+		} else {
+			setExtraCost(900);
+		}
+	}
+
+	@Override
 	public void currentPrint() {
 		System.out.println("ID: ");
 		System.out.println(getId());

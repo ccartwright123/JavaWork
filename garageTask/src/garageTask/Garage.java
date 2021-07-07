@@ -28,7 +28,6 @@ public class Garage {
 			if (getVehicle(i).getType() == type) {
 				this.vehicles.remove(getVehicle(i));
 				Print();
-				break;
 			} else {
 
 			}
@@ -45,5 +44,11 @@ public class Garage {
 			this.getVehicle(i).currentPrint();
 		}
 
+	}
+
+	public void listCost() {
+		for (int i = 0; i < this.vehicles.size(); i++) {
+			this.getVehicle(i).billPrint();
+		}
 	}
 }
